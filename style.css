@@ -1,0 +1,292 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Oswald:wght@700&family=Permanent+Marker&display=swap');
+
+
+
+*{
+    padding: 0;
+    margin: 0;
+}
+
+.container{ 
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+
+.container::before{
+    position: absolute;
+    content: ' ';
+    width: 100%;
+    height: 100%;
+    background-image: url("./photo/background.jpg");
+    background-size: 100%;
+    /* opacity: 0.95; */
+    z-index: -1;
+}
+
+/* logo desing  */
+.fk_logo a{
+    text-decoration: none;
+    display: flex;
+        align-items: center;
+        /* margin-left: 75px; */
+        font-size: 25px;
+        color: coral;
+        font-family: 'Permanent Marker';
+}
+
+.fk_logo{
+        display: flex;
+        /* align-items: center; */
+        margin-left: 75px;
+        /* font-size: 30px;
+        color: coral;
+        font-family: 'Permanent Marker'; */
+}
+
+.fk_logo  span{
+   color: aqua;
+   padding: 10px;
+   font-family:'Permanent Marker'; 
+}
+.fk_logo p{
+    color: aqua;
+}
+
+/* navbar  */
+
+.navbar{
+    background-color: #303030b3;
+    display: flex;
+    justify-content: space-between;
+}
+
+
+.navbar ul{
+    margin-right: 50px;
+    display: flex;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: flex;
+    padding: 20px 55px 5px 20px;
+}
+
+.navbar ul li a{
+    font-size: 20px;
+    color: aqua;
+    text-decoration: none;
+}
+
+.navbar ul li a:hover{
+    color: red;
+}
+
+hr{
+    height: 1px;
+    background-color: aqua;
+    border: none;
+}
+
+/* information  */
+.infocontainer{
+    margin-left: 75px;
+    margin-top: 150px;
+    display: inline-block;
+    position: absolute;
+}
+
+.divinfo{
+    display: inline-block;
+    position: relative;
+}
+
+.hello{
+    font-family: 'Oswald', sans-serif;
+    color: aqua;
+    font-size: 50px;
+}
+.name{
+    font-family: 'Anton', sans-serif;   
+    color:aqua;
+    font-size: 40px;    
+}
+.name span{
+    color: coral;
+}
+
+.about{
+    font-size: 15px;
+    /* color: #88c1fb; */
+    color: #85f9f9;
+}
+
+.about span{
+    padding-left: 8px;
+    border-right: 3px solid;
+    animation: typer .75s step-end infinite;
+    font-size: 30px;
+    font-weight: 500;
+}
+
+@keyframes typer {
+    from, to { border-color: transparent }
+    50% { border-color: aqua; }
+  }
+
+  
+.moreabout{
+    margin-top: 15px;
+    font-size: 17px;
+    color: #85f9f9;
+}
+
+
+/* developer pic design */
+
+
+.myPic{
+    display: flex;
+    height: 300px;
+    width: 300px;
+    float: right;
+    margin: 105px 180px 0px 0px ;
+    position: relative;
+}
+
+.myPic::before{
+    margin: -20px 0px 0px -10px;
+    /* margin: -40px 0px 0px -35px; */
+    position: absolute;
+    content: ' ';
+    width: 120%;
+    height: 120%;
+    background-image: url("./photo/animate.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    /* opacity: 0.90; */
+    z-index: -1;
+    animation: homespinner 140s linear infinite;
+}
+
+
+@keyframes homespinner{
+    0%{
+        transform: rotate(0deg);
+    }
+    100%{
+        transform: rotate(360deg);
+    }
+}
+
+/* about section  */
+
+.aboutSection{
+    margin-top: 100px;
+    text-align: center;
+    
+}
+
+.about_h1{
+    display: inline-block;
+    color: aqua;
+    font-family: 'Oswald', sans-serif;
+    border-bottom: 1px solid;
+    padding: 0px 100px;
+    border-image:   linear-gradient(to right, aqua 25%, coral 25%, coral 75%, aqua 75%) 5;
+}
+
+
+.about_p{
+    color: aqua;
+    padding: 30px 100px 0px 100px;
+}
+
+.about_p b{
+    color: aquamarine;
+}
+
+
+
+.cardFooter {
+    color: aqua;
+    background-color: #303030b3;
+    padding: 10px;
+    text-align: center;
+    width: 100%;
+    position:fixed;
+    left: 0;
+    bottom: 0;
+}
+
+
+
+
+
+
+
+
+@media(max-width: 950px){
+    .container{
+    position: absolute;
+    width: 100%;
+    height: 100%;
+}
+
+.navbar{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0px 0px 0px 0px;
+}
+
+.navbar ul{
+    margin: 0px 0px 0px 0px;
+}
+
+.navbar ul li{
+    list-style: none;
+    display: flex;
+    padding: 15px;
+    margin-top: 10px;
+}
+
+    .fk_logo a{
+        display: flex;
+        text-align: center;
+        margin: 0px 0px 0px 0px;
+        font-size: 25px;
+    }
+
+    .fk_logo{
+        display: flex;
+        margin: 0px;
+    }
+
+    .myPic{
+        display: none;
+        animation: none;
+        
+    }
+
+.infocontainer{
+    margin-left: 30px;
+    margin-top: 150px;
+    display: inline-block;
+    position: relative;
+}
+
+/* about section  */
+.about_p{
+    color: aqua;
+    padding: 30px 30px 0px 30px;
+}
+
+}
+
+
+
